@@ -1,0 +1,13 @@
+[Unit]
+Description=kamstrup
+After=multi-user.target
+
+[Service]
+User=pi
+Group=pi
+Type=simple
+Restart=always
+ExecStart=/usr/bin/python /home/pi/kamstrup.py
+
+[Install]
+WantedBy=multi-user.target
